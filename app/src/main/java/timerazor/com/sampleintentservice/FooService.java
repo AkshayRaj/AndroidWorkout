@@ -19,10 +19,25 @@ import android.os.IBinder;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
+/**
+ * FooService class is used to debug the behavior of Service
+ */
 public class FooService extends Service {
     private static final String TAG = FooService.class.getSimpleName();
     public static final String ACTION_START_SERVICE = "ACTION_START_SERVICE";
 
+    /**
+     *
+     * @param intent The Intent supplied to {@link android.content.Context#startService},
+     * as given.  This may be null if the service is being restarted after
+     * its process has gone away, and it had previously returned anything
+     * except {@link #START_STICKY_COMPATIBILITY}.
+     * @param flags Additional data about this start request.  Currently either
+     * 0, {@link #START_FLAG_REDELIVERY}, or {@link #START_FLAG_RETRY}.
+     * @param startId A unique integer representing this specific request to
+     * start.  Use with {@link #stopSelfResult(int)}.
+     * @return
+     */
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         if(intent.getAction() == ACTION_START_SERVICE){

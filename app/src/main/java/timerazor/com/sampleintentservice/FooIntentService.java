@@ -17,6 +17,9 @@ import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 
+/**
+ * FooIntentService is a class used to debug the behavior of IntentService
+ */
 public class FooIntentService extends IntentService {
     private static final String TAG = FooIntentService.class.getSimpleName();
     public static final String ACTION_START_INTENT_SERVICE = "ACTION_START_INTENT_SERVICE";
